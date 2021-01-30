@@ -12,7 +12,7 @@ function solution(skill, skill_trees) {
     _skill.reduce((prevSkill, currSkill) => {
       const priority = _skillTree.indexOf(currSkill);
       if ((priority !== -1) && (prevSkill > priority)) --score;
-      else if (prevSkill === -1 && priority !== -1) --score;
+      else if ((prevSkill === -1) && (priority !== -1)) --score;
 
       return priority;
     }, -2);
